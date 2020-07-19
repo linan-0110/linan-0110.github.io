@@ -19,7 +19,7 @@ export const ajax = function (type = "post", url, params) {
             url: serverAddress + url,
             params,
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
 				'x-auth-token': localStorage.getItem("token")
             }
         }).then((res) => {

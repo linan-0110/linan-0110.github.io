@@ -1,13 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from '../App.vue'
-import Login from "../views/Login/Login.vue";
-import Home from "../views/Home/Home.vue";
+import login from "../views/login/Login.vue";
+import home from "../views/home/Home.vue";
+
+import test from "../views/test/test.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
+	{
 		path: '/',
 		component: App,
 		children: [
@@ -16,28 +18,32 @@ const routes = [
 				redirect: '/login'
 			},
 		]
-  },
-  {
+	},
+	{
 		path: '/login',
 		name: 'login',
-		component: Login
+		component: login
 	},
 	{
 		path: '/home',
-    component: Home,
-    children: [
-      
-    ]
+		component: home,
+		children: [
+			{
+				path: '/test',
+				name: 'test',
+				component: test
+			}
+		]
 	},
 	{
 		path: '*',
 		name: '*',
-		component: Login
+		component: login
 	},
 ];
 
 const router = new VueRouter({
-  routes
+	routes
 });
 
 export default router;

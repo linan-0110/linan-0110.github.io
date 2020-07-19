@@ -2,7 +2,7 @@ import { ajax } from "../sdk/ajax";
 
 
 /* 登录 */
-export const reqLogin = (data) => ajax("post", "/", data)
+export const reqLogin = (data) => ajax("post", "/select-user-info", data)
 
 /* 选择组织 */
 export const reqOrgChoose = () => ajax("get", "/core/employ-relation/under-list")

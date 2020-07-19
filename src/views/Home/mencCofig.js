@@ -189,10 +189,10 @@ export const menuData = [
 
 
 /* 菜单配置 描述 */
-const menuData描述 = [
+export const menuData描述 = [
     // 有子菜单 并且字菜单分组的
     {
-        oneMenuName: "导航一", // 一级菜单名
+        optionName: "导航一", // 一级菜单名
         iconClassName: "aaa", // element-ui图标名
         index: '1', // 唯一标志
         childList: [ // 分组的
@@ -222,7 +222,7 @@ const menuData描述 = [
     },
     // 有子菜单 字菜单不分组的
     {
-        oneMenuName: "导航二",
+        optionName: "导航二",
         iconClassName: "el-icon-menu",
         index: '2',
         disabled: false, // 是否禁用
@@ -237,7 +237,7 @@ const menuData描述 = [
     },
     // 无子菜单的
     {
-        oneMenuName: "导航三",
+        optionName: "导航三",
         iconClassName: "el-icon-document",
         routerName: "home",
         index: '3',
@@ -246,5 +246,4 @@ const menuData描述 = [
     
     "导航四"
 ]
-
 

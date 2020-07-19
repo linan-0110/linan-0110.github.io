@@ -11,7 +11,7 @@
             </div>
             <div class="right">
                 <span class="warp">
-                    <el-dropdown>
+                    <el-dropdown @command="onLogOut">
                         <span class="el-dropdown-link">
                             账号管理
                             <i class="el-icon-arrow-down el-icon--right"></i>
@@ -23,7 +23,7 @@
                     </el-dropdown>
                 </span>
                 <span>
-                    <el-dropdown>
+                    <el-dropdown @command="onLogOut">
                         <span class="el-dropdown-link">
                             权限切换
                             <i class="el-icon-arrow-down el-icon--right"></i>
@@ -208,6 +208,9 @@ export default {
                     item.type = "info";
                 }
             });
+        },
+        onLogOut() {
+            this.$router.push('login')
         }
     }
 };

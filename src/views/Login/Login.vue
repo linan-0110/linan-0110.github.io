@@ -23,7 +23,7 @@
     </div>
 </template>
 <script>
-// import { reqLogin } from "@/api/login";
+import { reqLogin } from "@/api/login";
 
 export default {
     name: "login",
@@ -35,22 +35,24 @@ export default {
             }
         };
     },
-    created() {},
+    created() {
+        this.onSignIn()
+    },
     mounted() {},
     methods: {
         /* 登录按钮 */
         onSignIn() {
             console.log(this.form);
-            // reqLogin(this.form)
-            //     .then(res => {
-            //         console.log(res);
-            //         localStorage.setItem("token", res.token);
-            //     })
-            //     .catch(err => {
-            //         console.log("登录失败", err);
-            //     });
+            reqLogin()
+                .then(res => {
+                    console.log(res);
+                    // localStorage.setItem("token", res.token);
+                })
+                .catch(err => {
+                    console.log("登录失败", err);
+                });
 
-            this.$router.push("/home");
+            // this.$router.push("test");
         }
     }
 };
