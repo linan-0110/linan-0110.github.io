@@ -107,6 +107,7 @@
 <script>
 import { menuData } from "./mencCofig.js";
 
+
 export default {
     data() {
         return {
