@@ -2,8 +2,8 @@
     <div class="login">
         <div class="shade">
             <header class="header">
-                <img class="logo" src="../../assets/logo.png" alt="慧牧科技LOGO" />
-                慧牧科技
+                <img class="logo" src="../../assets/logo.png"/>
+                某某科技公司
             </header>
             <article class="article">
                 <h1>登录界面</h1>
