@@ -2,7 +2,7 @@
     <div class="home">
         <header class="header">
             <div class="left">
-                慧牧科技
+                xx科技
                 <el-button
                     @click="onMenuCollapse"
                     circle
@@ -48,8 +48,8 @@
                         :unique-opened="true"
                         :default-openeds="defaultUnfoldedMenu"
                         select="1-1"
-                        background-color="rgba(46,38,87,0)"
-                        text-color="#696969"
+                        background-color="#545c64"
+                        text-color="#fff"
                         active-text-color="#ffd04b"
                     >
                         <div v-for="(item) in menuData " :key="item.index">
@@ -106,7 +106,6 @@
 
 <script>
 import { menuData } from "./mencCofig.js";
-
 
 export default {
     data() {
@@ -211,7 +210,7 @@ export default {
             });
         },
         onLogOut() {
-            this.$router.push('login')
+            this.$router.push("login");
         }
     }
 };
@@ -226,9 +225,7 @@ export default {
     display: flex;
     flex-direction: column;
     .header {
-        // background-color: #029b62;
-        // background-color: rgb(46,38,87);
-        background-color: rgb(85, 70, 148);
+        background-color: #545c64;
         height: 40px;
         padding: 10px 20px;
         margin-bottom: 5px;
@@ -238,9 +235,6 @@ export default {
         .left {
             font-size: 25px;
             color: #fff;
-            // /deep/ .is-circle {
-            //     margin-left: 40px;
-            // }
         }
         .right {
             .warp {
@@ -259,8 +253,7 @@ export default {
             box-sizing: border-box;
             .col1 {
                 margin-right: 5px;
-                // background-color: rgb(46,38,87);
-                background-image: linear-gradient(to bottom, rgb(85, 70, 148) , rgb(41, 33, 85), rgb(41, 33, 85));
+                background-color: #545c64;
             }
             .col2 {
                 flex: 1;
